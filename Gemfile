@@ -12,7 +12,7 @@ gem 'everypolitician', github: 'everypolitician/everypolitician-ruby'
 gem 'everypolitician-popolo', github: 'everypolitician/everypolitician-popolo'
 gem 'scraperwiki', github: 'openaustralia/scraperwiki-ruby', branch: 'morph_defaults'
 gem 'sqlite_magic', github: 'openc/sqlite_magic'
-gem 'wikidata-fetcher', github: 'everypolitician/wikidata-fetcher'
+gem 'wikidata-fetcher', github: 'poteris/wikidata-fetcher'
 
 group :test do
   gem 'rubocop'
