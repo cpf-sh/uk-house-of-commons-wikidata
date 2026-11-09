@@ -3,6 +3,25 @@
 
 require 'wikidata/fetcher'
 
+USER_AGENT="wikidata-hoc-fetcher (loudspeek@poteris.co.uk)"
+
+module RestClient::Platform
+  def self.default_user_agent
+    USER_AGENT
+  end
+end
+
+module OpenURI
+  class << self
+    alias open_uri_original_open_loop open_loop # :nodoc:
+  end
+  def OpenURI.open_loop(uri, options)
+    puts "Opening " + uri.to_s
+    puts options.merge({"User-Agent": USER_AGENT})
+    open_uri_original_open_loop uri, options.merge({"User-Agent" => USER_AGENT})
+  end
+end
+
 # People with a position 'UK MP', of a suitable subclass
 qual_sparq = <<EOQ
   SELECT DISTINCT ?item WHERE {
