@@ -16,7 +16,6 @@ module OpenURI
     alias open_uri_original_open_loop open_loop # :nodoc:
   end
   def OpenURI.open_loop(uri, options)
-    puts "Opening " + uri.to_s
     puts options.merge({"User-Agent": USER_AGENT})
     open_uri_original_open_loop uri, options.merge({"User-Agent" => USER_AGENT})
   end
