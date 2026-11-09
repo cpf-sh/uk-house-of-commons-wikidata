@@ -14,8 +14,8 @@ GIT
       require_all
 
 GIT
-  remote: https://github.com/everypolitician/wikidata-fetcher.git
-  revision: e14ebbff9c91a7ec477e0123974ae0ce0a15d0ab
+  remote: https://github.com/poteris/wikidata-fetcher.git
+  revision: c57d1f363240bd792292c323a05c9de388a4f855
   specs:
     wikidata-fetcher (0.24.0)
       json
